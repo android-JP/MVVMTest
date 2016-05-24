@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyTitleBar">
+        <attr name="titleText" format="string"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="titleSize" format="dimension"/>
+
+        <attr name="leftBtnText" format="string"/>
+        <attr name="leftBtnBg" format="reference|color"/>
+        <attr name="leftBtnTextColor" format="color"/>
+        <attr name="btnLeftTextSize" format="dimension"/>
+
+
+        <attr name="rightBtnText" format="string"/>
+        <attr name="rightBtnBg" format="reference|color"/>
+        <attr name="rightBtnTextColor" format="color"/>
+        <attr name="btnRightTextSize" format="dimension"/>
+
+
+        <attr name="leftIcon" format="reference"/>
+        <attr name="leftIconBg" format="reference|color"/>
+
+        <attr name="rightIcon" format="reference"/>
+        <attr name="rightIconBg" format="reference|color"/>
+
+
+
+        <attr name="leftLayout" format="reference"/>
+        <attr name="rightLayout" format="reference"/>
+
+        <attr name="leftBtnShow" format="boolean"/>
+        <attr name="rightBtnShow" format="boolean"/>
+        <attr name="leftIconShow" format="boolean"/>
+        <attr name="rightIconShow" format="boolean"/>
+        <attr name="leftLayoutShow" format="boolean"/>
+        <attr name="rightLayoutShow" format="boolean"/>
+
+    </declare-styleable>
+
+
+</resources>

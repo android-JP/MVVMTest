@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <import type="com.example.androidjp.mvvmtest.model.UserModel"/>
+        <import type="com.example.androidjp.mvvmtest.model.Channel"/>
+
+        <variable name="user" type="UserModel"/>
+        <variable
+            name="channel"
+            type="Channel"/>
+    </data>
+
+
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.example.androidjp.mvvmtest.ui.view.customviews.MyTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:leftBtnText="菜单"
+            app:rightBtnText=""
+            app:titleWen='@{user==null?"你好，用户":"未登录"}'
+            />
+
+        <!--app:rightBtnText='@{user==null?"请登录":"个人中心"}'
+            app:titleText='@{user==null?"首页":user.name+",你好"}'-->
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_sel"
+            android:layout_margin="8dp"
+            />
+
+        <Button
+            android:id="@+id/btn_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐藏"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_sel"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text='@{user!=null?user.speak()+"当前打包渠道为："+ channel.channel:"当前用户为空"+"，其实真的不错～！"}'
+            />
+
+    </LinearLayout>
+
+    </layout>
